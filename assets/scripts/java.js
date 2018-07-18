@@ -41,7 +41,6 @@ $("#add-train").on("click", function (event) {
   // remainder of the difference used to calculate minutes left
   // minutes left subtracted from frequency to establish next train arrival
   var newArrival = moment(arrival, "hh:mm").subtract(1, "years");
-  var currentTime = moment().format("hh:mm");
   var difference = moment().diff(moment(newArrival), "minutes");
   var minutesLeft = difference % frequency;
   var minutesAway = frequency - minutesLeft;
